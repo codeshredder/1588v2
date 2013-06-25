@@ -41,9 +41,9 @@ Table of Contents
 1. Overview
 ==============
 
-Host: Ubuntu 12.04 LTS 64bit
+Host: ubuntu 12.04 LTS 64bit
 
-PHY: TI DP83640
+PHY: dp83640
 
 
 2. Host Prepare
