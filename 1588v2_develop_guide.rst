@@ -55,13 +55,11 @@ PHY: TI DP83640
 
 kernel config::
 
-   NETWORK_PHY_TIMESTAMPING
-   PHYLIB
-   Device Drivers ->  PTP clock support  ->  PTP clock support
-                                         ->  Driver for the National Semiconductor DP83640 PHYTER
+   Networking support -> Networking options -> Timestamping in PHY devices
+   Device Drivers -> Network device support -> PHY Device support and infrastructure
+   Device Drivers -> PTP clock support -> PTP clock support
+                                       -> Driver for the National Semiconductor DP83640 PHYTER
    
-
-
 
 4. Ptp protocol
 ==============
