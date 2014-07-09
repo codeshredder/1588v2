@@ -66,16 +66,29 @@ kernel config::
 4. Ptp protocol
 ==============
 
-download ptpd-2.2.2.tar.gz from http://ptpd.sourceforge.net/
+download ptpd-2.3.1-rc1.tar.gz from http://ptpd.sourceforge.net/
 
 ::
 
-   tar xvf ptpd-2.2.2.tar.gz
-   cd ptpd-2.2.2/src
+   tar xvf ptpd-2.3.1-rc1.tar.gz
+   cd ptpd-2.3.1-rc1
+   ./configure
    make
 
 
-ptpd2 is the target binary.
+ptpd2 in ./src is the target binary.
+
+cross compile
+
+::
+
+   tar xvf ptpd-2.3.1-rc1.tar.gz
+   cd ptpd-2.3.1-rc1
+   export ac_cv_func_malloc_0_nonnull=yes
+   ./configure  --build=i686-pc-linux --host=arm-linux-gnueabi --target=i686-linux  LIBS="-L./lib -lrt -lm"
+   make
+
+(copy librt.so libm.so of arm to ./lib)
 
 
 5. test1
