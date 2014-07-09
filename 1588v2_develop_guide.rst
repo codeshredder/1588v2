@@ -2,6 +2,7 @@
   1588v2 Develop Guide
 ==========================================================
 
+.. contents::
 
 Authors
 ==========
@@ -18,21 +19,7 @@ ptpd: http://ptpd.sourceforge.net/
 testptp: http://lxr.free-electrons.com/source/Documentation/ptp/testptp.c
 
 
-Table of Contents
-=================
 
-::
-
-  0. What is it?
-  1. Overview
-  2. Host Prepare
-  3. Kernel drivers
-  4. Ptp protocol
-  5. test1
-  6. test2
-  7. Licensing
-  8. Contacts
-  
 0. What is it?
 ==============
 
@@ -117,8 +104,11 @@ check result::
    1) change time in master by "date -s xxxx".
    2) show time in slave to check if slave time is the same as master.
 
-6. test2
+
+6. DP83640 Precision PHYTER
 ==============
+
+
 
 
 7. Licensing
