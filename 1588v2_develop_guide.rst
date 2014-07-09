@@ -78,17 +78,21 @@ download ptpd-2.3.1-rc1.tar.gz from http://ptpd.sourceforge.net/
 
 ptpd2 in ./src is the target binary.
 
-cross compile
+
+cross compile arm application
 
 ::
 
    tar xvf ptpd-2.3.1-rc1.tar.gz
    cd ptpd-2.3.1-rc1
    export ac_cv_func_malloc_0_nonnull=yes
-   ./configure  --build=i686-pc-linux --host=arm-linux-gnueabi --target=i686-linux  LIBS="-L./lib -lrt -lm"
+   ./configure  --build=i686-pc-linux --host=arm-linux-gnueabi --target=i686-linux
    make
 
-(copy librt.so libm.so of arm to ./lib)
+(some old arm cross compile method:
+modify "--host=arm-linux-gnueabi"
+copy librt.so libm.so of arm to ./lib
+./configure  --build=i686-pc-linux --host=arm-linux-gnueabi --target=i686-linux  LIBS="-L./lib -lrt -lm")
 
 
 5. test1
