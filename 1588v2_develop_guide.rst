@@ -72,8 +72,7 @@ cross compile arm application
 
    tar xvf ptpd-2.3.1-rc1.tar.gz
    cd ptpd-2.3.1-rc1
-   export ac_cv_func_malloc_0_nonnull=yes
-   ./configure  --build=i686-pc-linux --host=arm-linux-gnueabi --target=i686-linux
+   NM=nm CC=arm_v5t_le-gcc ./configure --build=i686-linux --host=arm_v5t_le  ac_cv_func_malloc_0_nonnull=yes
    make
 
 (some old arm cross compile method:
