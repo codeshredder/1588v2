@@ -53,12 +53,12 @@ kernel config::
 4. Ptp protocol
 ==============
 
-download ptpd-2.3.1-rc1.tar.gz from http://ptpd.sourceforge.net/
+download ptpd-2.3.1-rc3.tar.gz from http://ptpd.sourceforge.net/
 
 ::
 
-   tar xvf ptpd-2.3.1-rc1.tar.gz
-   cd ptpd-2.3.1-rc1
+   tar xvf ptpd-2.3.1-rc3.tar.gz
+   cd ptpd-2.3.1-rc3
    ./configure
    make
 
@@ -70,8 +70,8 @@ cross compile arm application
 
 ::
 
-   tar xvf ptpd-2.3.1-rc1.tar.gz
-   cd ptpd-2.3.1-rc1
+   tar xvf ptpd-2.3.1-rc3.tar.gz
+   cd ptpd-2.3.1-rc3
    NM=nm CC=arm_v5t_le-gcc ./configure --build=i686-linux --host=arm_v5t_le  ac_cv_func_malloc_0_nonnull=yes
    make
 
@@ -89,13 +89,13 @@ connect two node's eth0 with cable.
 clock master::
 
    ifconfig eth0 192.168.0.1
-   ./ptpd2 -G -b eth0 -P
+   ./ptpd2 -M -i eth0
 
 
 clock slave::
 
    ifconfig eth0 192.168.0.2
-   ./ptpd2 -g -b eth0 -P
+   ./ptpd2 -s -i eth0
 
 
 check result::
