@@ -100,8 +100,8 @@ clock slave::
 
 check result::
 
-   1) change time in master by "date -s xxxx".
-   2) show time in slave to check if slave time is the same as master.
+   1) change date in master by run "date -s xx:xx:xx".
+   2) show date in slave to by run "date" to check if slave time is the same as master.
 
 
 6. DP83640 Precision PHYTER
